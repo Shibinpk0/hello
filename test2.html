@@ -1,0 +1,185 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="test2.css">  
+    <title>Personal Portfolio Website - Easy Tutorials</title>  
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>  
+</head>  
+<body>  
+    <div id="header">  
+        <div class="container">  
+            <nav>  
+                <img src="images/logo.png" class="logo" alt="Logo">  
+                <ul>  
+                    <li><a href="#header">Home</a></li>  
+                    <li><a href="#about">About</a></li>  
+                    <li><a href="#services">Services</a></li>  
+                    <li><a href="#portfolio">Portfolio</a></li>  
+                    <li><a href="#contact">Contact</a></li>  
+                </ul>  
+                <i class="fas fa-bars" onclick="openMenu()"></i>  
+                <i class="fas fa-times" onclick="closeMenu()"></i>  
+            </nav>  
+            <div class="header-text">  
+                <p>Hi, I'm</p>  
+                <h1>Avinash</h1>  
+            </div>  
+        </div>  
+    </div>  
+
+    <div id="about">  
+        <div class="container">  
+            <div class="row">  
+                <div class="about-call-1">  
+                    <img src="images/user.png" alt="User Image">  
+                </div>  
+                <div class="about-call-2">  
+                    <h1 class="subtitle">About Me</h1>  
+                    <p>I'm a UI/UX designer...</p>  
+                    <div class="tab-titles">  
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>  
+                        <p class="tab-links" onclick="openTab('experience')">Experience</p>  
+                        <p class="tab-links" onclick="openTab('education')">Education</p>  
+                    </div>  
+                    <div class="tab-contents active-tab" id="skills">  
+                        <ul>  
+                            <li><span>UI/UX</span><br> Designing web app interfaces</li>  
+                        </ul>  
+                    </div>  
+                    <div class="tab-contents" id="experience">  
+                        <ul>  
+                            <li>Worked at XYZ Company...</li>  
+                        </ul>  
+                    </div>  
+                    <div class="tab-contents" id="education">  
+                        <ul>  
+                            <li>Bachelor's in Computer Science...</li>  
+                        </ul>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+    </div>  
+
+    <div id="services">  
+        <div class="container">  
+            <h1 class="subtitle">My Services</h1>  
+            <div class="services-list">  
+                <div>  
+                    <i class="fas fa-code"></i>  
+                    <h2>Web Development</h2>  
+                    <p>Building responsive websites...</p>  
+                    <a href="#">Learn More</a>  
+                </div>  
+                <div>  
+                    <i class="fas fa-crop"></i>  
+                    <h2>Graphic Design</h2>  
+                    <p>Creating stunning graphics...</p>  
+                    <a href="#">Learn More</a>  
+                </div>  
+                <div>  
+                    <i class="fas fa-app"></i>  
+                    <h2>App Development</h2>  
+                    <p>Developing mobile applications...</p>  
+                    <a href="#">Learn More</a>  
+                </div>  
+            </div>  
+        </div>  
+    </div>  
+
+    <div id="portfolio">  
+        <div class="container">  
+            <h1 class="subtitle">My Work</h1>  
+            <div class="worklist">  
+                <div class="work">  
+                    <img src="images/work1.png" alt="Work 1">  
+                    <div class="layer">  
+                        <h3>Project Title</h3>  
+                        <p>Description of the project...</p>  
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>  
+                    </div>  
+                </div>  
+                <div class="work">  
+                    <img src="images/work2.png" alt="Work 2">  
+                    <div class="layer">  
+                        <h3>Project Title</h3>  
+                        <p>Description of the project...</p>  
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>  
+                    </div>  
+                </div>  
+                <div class="work">  
+                    <img src="images/work3.png" alt="Work 3">  
+                    <div class="layer">  
+                        <h3>Project Title</h3>  
+                        <p>Description of the project...</p>  
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>  
+                    </div>  
+                </div>  
+            </div>  
+            <a href="#" class="btn">See More</a>  
+        </div>  
+    </div>  
+
+    <div id="contact">  
+        <div class="container">  
+            <div class="contact-left">  
+                <h1 class="subtitle">Contact Me</h1>  
+                <p><i class="fas fa-envelope"></i> your.email@example.com</p>  
+                <p><i class="fas fa-phone"></i> +1234567890</p>  
+                <div class="social-icons">  
+                    <a href="#"><i class="fab fa-facebook"></i></a>  
+                    <a href="#"><i class="fab fa-twitter"></i></a>  
+                    <a href="#"><i class="fab fa-linkedin"></i></a>  
+                </div>  
+                <a href="images/mycv.pdf" class="btn btn2" download>Download CV</a>  
+            </div>  
+            <div class="contact-right">  
+                <form id="contact-form">  
+                    <input type="text" name="name" placeholder="Your Name" required>  
+                    <input type="email" name="email" placeholder="Your Email" required>  
+                    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>  
+                    <button type="submit" class="btn btn2">Submit</button>  
+                    <span id="msg"></span>  
+                </form>  
+            </div>  
+        </div>  
+    </div>  
+
+    <div class="copyright">  
+        <p>Made with <i class="fas fa-heart"></i> by Easy Tutorials</p>  
+    </div>  
+
+    <script>  
+        function openMenu() {  
+            document.getElementById('site-menu').style.right = '0';  
+        }  
+        function closeMenu() {  
+            document.getElementById('site-menu').style.right = '-200px';  
+        }  
+        function openTab(tabName) {  
+            const tabs = document.querySelectorAll('.tab-contents');  
+            tabs.forEach(tab => {  
+                tab.classList.remove('active-tab');  
+            });  
+            document.getElementById(tabName).classList.add('active-tab');  
+
+            const links = document.querySelectorAll('.tab-links');  
+            links.forEach(link => {  
+                link.classList.remove('active-link');  
+            });  
+            document.querySelector(`.tab-links[onclick*="${tabName}"]`).classList.add('active-link');  
+        }  
+        document.getElementById('contact-form').onsubmit = function(event) {  
+            event.preventDefault();  
+            const msg = document.getElementById('msg');  
+            msg.innerHTML = "Message sent successfully!";  
+            setTimeout(() => {  
+                msg.innerHTML = "";  
+            }, 5000);  
+            this.reset();  
+        };  
+    </script>  
+</body>  
+</html>
